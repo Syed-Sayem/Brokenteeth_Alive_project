@@ -1,11 +1,12 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "General Sans";
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: auto;
   min-height: 100%;
@@ -13,8 +14,6 @@ html, body {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
-
-
 
 .back-video {
   position: fixed;
@@ -24,21 +23,19 @@ html, body {
   height: 100vh;
   object-fit: cover;
   z-index: -2;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   will-change: transform;
   pointer-events: none;
 }
 
-
-.bg-img{
-  background-image: url('bg_main.PNG');
+.bg-img {
+  background-image: url("bg_main.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   background-attachment: flex;
-
 }
 
 #videoOverlay {
@@ -53,7 +50,7 @@ html, body {
 }
 
 #second_part {
-  background-image: url('IMG_5551.PNG');
+  background-image: url("IMG_5551.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,12 +58,7 @@ html, body {
   background-attachment: flex;
 }
 
-
-
-
-
-
-#minicircle{
+#minicircle {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   position: absolute;
   z-index: 99999;
@@ -76,7 +68,7 @@ html, body {
   background-color: #fff;
 }
 
-.bounding{
+.bounding {
   width: fit-content;
   overflow: hidden;
 }
@@ -85,7 +77,7 @@ html, body {
   transform: translateY(100%);
 }
 
-#main{
+#main {
   width: 100%;
   height: auto;
   background: transparent;
@@ -119,8 +111,6 @@ html, body {
   padding-right: 2px;
 }
 
-
-
 #herofooter a {
   color: #fff;
   font-weight: bold;
@@ -136,19 +126,16 @@ html, body {
   font-size: 9vw;
   text-transform: uppercase;
   font-weight: bold;
-  opacity: .9;
+  opacity: 0.9;
   text-shadow: 2px 2px 5px black;
   color: rgb(0, 255, 72);
-  font-family: 'BBH Sans Bogle',sans-serif;
- 
+  font-family: "BBH Sans Bogle", sans-serif;
 }
 
 #heading .blocktext {
   width: 50%;
   margin-left: 233px;
-  
 }
-
 
 .blocktext {
   display: flex;
@@ -157,7 +144,7 @@ html, body {
   width: fit-content;
 }
 
-.blocktext h5{
+.blocktext h5 {
   text-transform: uppercase;
   font-size: 15px;
   text-align: right;
@@ -173,21 +160,19 @@ html, body {
 
 #chhotiheadings h5 {
   text-transform: uppercase;
-  margin-top: .5vw;
+  margin-top: 0.5vw;
   font-size: 10px;
   text-align: right;
 }
 
 .boundingelem_avail {
-   background-color: red;
+  background-color: red;
 }
 
-
-
-#herofooter{
+#herofooter {
   padding: 0 2vw;
   width: 100%;
-  position: absolute; 
+  position: absolute;
   bottom: 3%;
   display: flex;
   align-items: center;
@@ -229,15 +214,14 @@ html, body {
   text-decoration: none;
 }
 
-#second .elem a h1{
+#second .elem a h1 {
   color: white;
 }
-
 
 .elem {
   display: flex;
   align-items: center;
-  justify-content: space-between ;
+  justify-content: space-between;
   width: 100%;
   padding: 3.5vw 3vw;
   padding-right: 0;
@@ -245,36 +229,30 @@ html, body {
   position: relative;
 }
 
-
-
 .elem h1 {
   text-transform: uppercase;
   font-size: 7.6vw;
-  opacity: .7;
+  opacity: 0.7;
 }
 
-.elemlast{
+.elemlast {
   border-bottom: 1px solid #888;
 }
 
-
-
 .elem img {
-    opacity: 0;
-    pointer-events: none;
-    height: 300px;
-    width: 300px;
-    z-index: 999;
-    position: absolute;
-    transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  height: 300px;
+  width: 300px;
+  z-index: 999;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 #second .elem_dude img {
   height: 400px;
   width: 700px;
 }
-
-
 
 #about {
   display: flex;
@@ -288,7 +266,7 @@ html, body {
   background-color: black;
 }
 
-@media (max-width:768) {
+@media (max-width: 768) {
   #about {
     flex-direction: column;
     align-items: flex-start;
@@ -299,17 +277,17 @@ html, body {
   }
 }
 
-#textabout{
-width: 25rem;
+#textabout {
+  width: 25rem;
 }
 
 #textabout h5 {
   text-transform: uppercase;
-  opacity: .8;
+  opacity: 0.8;
   margin-bottom: 10px;
 }
 
-#textabout p{
+#textabout p {
   line-height: 1.7;
   margin-bottom: 30px;
 }
@@ -334,12 +312,12 @@ width: 25rem;
   background-color: black;
 }
 
-#subscribe h5{
-text-transform: uppercase;
-opacity: .6;
+#subscribe h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
-#subscribe h3{
+#subscribe h3 {
   text-transform: uppercase;
   font-size: 14px;
   margin-top: 10px;
@@ -348,9 +326,7 @@ opacity: .6;
 
 #subscribe a {
   text-decoration: none;
-
 }
-
 
 #footer {
   background-color: black;
@@ -366,7 +342,7 @@ opacity: .6;
   gap: 20px;
 }
 
-#footerright{
+#footerright {
   display: flex;
   gap: 30px;
 }
@@ -391,7 +367,7 @@ opacity: .6;
 .video-card {
   background: #1a1a1a;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 30%;
@@ -400,7 +376,6 @@ opacity: .6;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .video-card video {
@@ -415,11 +390,8 @@ opacity: .6;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-
-
 /*  Mobile Responsive Design */
 @media (max-width: 768px) {
-
   #nav {
     position: relative;
     display: flex;
@@ -496,21 +468,18 @@ opacity: .6;
     height: 250px;
   }
 
-  
- 
   /* Footer - Responsive */
-@media (max-width: 768px) {
 
   #footer {
     display: flex;
-    flex-direction: row;      
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;          
+    flex-wrap: wrap;
     padding: 20px 15px;
     background-color: black;
     color: white;
-    width: 100vw;           
+    width: 100vw;
   }
 
   #footerleft {
@@ -536,6 +505,16 @@ opacity: .6;
   #footer h5 {
     margin: 0;
   }
-}
+  
+  .back-video,
+  #videoOverlay {
+    position: absolute; /* instead of fixed */
+    height: auto;        /* allow content to expand */
+    min-height: 100vh;   /* keep full section height */
+  }
 
+  #hero {
+    position: relative;
+    height: auto;
+  }
 }
