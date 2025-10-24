@@ -197,10 +197,6 @@ html, body {
   justify-content: space-between;
   padding: 40px 30px;
   flex-wrap: wrap;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 #footerleft { display: flex; gap: 20px; flex-wrap: wrap; }
 #footerright { display: flex; gap: 30px; flex-wrap: wrap; }
