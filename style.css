@@ -13,6 +13,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* --------- Background Video & Overlay --------- */
 .back-video {
   position: fixed;
   top: 0;
@@ -24,15 +25,7 @@ html, body {
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
   will-change: transform;
-  pointer-events: none;
-}
-
-.bg-img {
-  background-image: url("bg_main.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
+  pointer-events: none; /* allow clicks to pass through */
 }
 
 #videoOverlay {
@@ -46,12 +39,20 @@ html, body {
   pointer-events: none;
 }
 
+.bg-img {
+  background-image: url("bg_main.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 #second_part {
   background-image: url("IMG_5551.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  min-height: 100vh;
 }
 
 /* --------- Cursor --------- */
@@ -227,54 +228,23 @@ html, body {
 /* --------- Media Queries: Mobile --------- */
 @media (max-width: 768px) {
 
-  html, body {
-    overflow-x: hidden;
-  }
+  html, body { overflow-x: hidden; }
 
   /* Hero */
-  #hero {
-    height: auto;
-    padding: 20px 10px;
-    text-align: center;
-  }
-  #heading h1 {
-    font-size: 12vw;
-    margin-left: 0;
-  }
-  #heading .blocktext {
-    width: 100%;
-    margin-left: 0;
-    align-items: center;
-  }
+  #hero { height: auto; padding: 20px 10px; text-align: center; }
+  #heading h1 { font-size: 12vw; margin-left: 0; }
+  #heading .blocktext { width: 100%; margin-left: 0; align-items: center; }
 
   /* Nav */
-  #nav {
-    padding: 15px 20px;
-    justify-content: flex-start;
-  }
-  #nav a {
-    font-size: 16px;
-  }
-  #nav h4 {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 14px;
-    color: #fff;
-  }
+  #nav { padding: 15px 20px; justify-content: flex-start; }
+  #nav a { font-size: 16px; }
+  #nav h4 { position: absolute; top: 10px; right: 20px; font-size: 14px; color: #fff; }
 
   /* Cursor */
   #minicircle { display: none; }
 
   /* About */
-  #about {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 10vw 5vw;
-    text-align: center;
-    padding-left: 5vw;
-  }
+  #about { flex-direction: column; align-items: center; gap: 30px; padding: 10vw 5vw; text-align: center; padding-left: 5vw; }
   #textabout { width: 100%; }
   #about img { width: 150px; }
 
@@ -298,14 +268,13 @@ html, body {
 
   /* Back video & overlay fix */
   .back-video, #videoOverlay {
-    position: fixed;   /* keep fixed so no extra height */
+    position: fixed;  
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;     /* fill viewport */
-    pointer-events: none; /* allow clicks to pass through */
-    z-index: -2;       /* back-video */
+    height: 100vh;  
+    pointer-events: none;  
+    z-index: -2;  
   }
   #videoOverlay { z-index: -1; }
-
 }
