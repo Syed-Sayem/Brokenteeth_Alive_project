@@ -267,19 +267,4 @@ html, body {
 
   /* Back video fix for mobile */
   .back-video, #videoOverlay { position: absolute; height: auto; min-height: 100vh; }
-    .back-video, 
-  #videoOverlay {
-    position: fixed;   /* keep fixed so they stay in background */
-    width: 100%;
-    height: 100vh;
-    pointer-events: none; /* important: allow clicks to pass through */
-    z-index: -2;          /* back-video */
-  }
-
-  #videoOverlay { z-index: -1; }
-
-  #minicircle {
-    display: none; /* hide custom cursor on mobile */
-  }
-
 }
