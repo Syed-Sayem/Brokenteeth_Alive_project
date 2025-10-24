@@ -265,6 +265,8 @@ html, body {
   #footerright a { font-size: 12px; }
   #footer h5 { margin: 0; }
 
+  /* Back video fix for mobile */
+  .back-video, #videoOverlay { position: absolute; height: auto; min-height: 100vh; }
     .back-video, 
   #videoOverlay {
     position: fixed;   /* keep fixed so they stay in background */
@@ -279,7 +281,5 @@ html, body {
   #minicircle {
     display: none; /* hide custom cursor on mobile */
   }
-
-
 
 }
