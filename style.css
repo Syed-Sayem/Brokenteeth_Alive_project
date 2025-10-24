@@ -10,10 +10,18 @@ html, body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden; /* allow scrolling but prevent extra white space */
   scroll-behavior: smooth;
+  background-color: black; /* avoid default white background */
 }
 
-/* --------- Background Video & Overlay --------- */
+#main {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* --------- Background Video --------- */
 .back-video {
   position: fixed;
   top: 0;
@@ -25,7 +33,16 @@ html, body {
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
   will-change: transform;
-  pointer-events: none; /* allow clicks to pass through */
+  pointer-events: none; /* allow clicks through video */
+}
+
+.bg-img {
+  background-image: url("bg_main.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 #videoOverlay {
@@ -36,15 +53,7 @@ html, body {
   height: 100vh;
   background-color: rgba(0,0,0,0.4);
   z-index: -1;
-  pointer-events: none;
-}
-
-.bg-img {
-  background-image: url("bg_main.PNG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
+  pointer-events: none; /* allow clicks through overlay */
 }
 
 #second_part {
@@ -52,11 +61,11 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  width: 100%;
 }
 
 /* --------- Cursor --------- */
-#minicircle {
+/* #minicircle {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   position: absolute;
   z-index: 99999;
@@ -64,10 +73,9 @@ html, body {
   width: 10px;
   height: 10px;
   background-color: #fff;
-}
+} */
 
 /* --------- Hero & Navigation --------- */
-#main { width: 100%; height: auto; }
 #hero {
   position: relative;
   width: 100%;
@@ -182,15 +190,20 @@ html, body {
 
 /* --------- Footer --------- */
 #footer {
-  background-color: black;
+  background-color: green;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 40px 30px;
+  flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
-#footerleft { display: flex; gap: 20px; }
-#footerright { display: flex; gap: 30px; }
+#footerleft { display: flex; gap: 20px; flex-wrap: wrap; }
+#footerright { display: flex; gap: 30px; flex-wrap: wrap; }
 #footer a { text-transform: uppercase; font-size: 14px; font-weight: 500; color: #fff; text-decoration: none; }
 
 /* --------- Video Section --------- */
@@ -228,7 +241,7 @@ html, body {
 /* --------- Media Queries: Mobile --------- */
 @media (max-width: 768px) {
 
-  html, body { overflow-x: hidden; }
+  html, body { overflow-x: hidden; overflow-y: auto; }
 
   /* Hero */
   #hero { height: auto; padding: 20px 10px; text-align: center; }
@@ -253,28 +266,20 @@ html, body {
   .video-card { width: 90%; height: 250px; }
 
   /* Footer */
-  #footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 15px;
-    width: 100vw;
-  }
-  #footerleft { gap: 10px; font-size: 12px; flex-wrap: wrap; }
-  #footerright { flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+  #footer { flex-direction: column; justify-content: center; align-items: center; padding: 20px 15px; width: 100vw; }
+  #footerleft, #footerright { justify-content: center; text-align: center; }
   #footerright a { font-size: 12px; }
-  #footer h5 { margin: 0; }
 
   /* Back video & overlay fix */
   .back-video, #videoOverlay {
-    position: fixed;  
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;  
-    pointer-events: none;  
-    z-index: -2;  
+    height: 100vh;
+    pointer-events: none; /* allow clicks to pass through */
+    z-index: -2;
   }
   #videoOverlay { z-index: -1; }
+
 }
