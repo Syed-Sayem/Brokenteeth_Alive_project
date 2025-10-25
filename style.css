@@ -44,7 +44,6 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  
 }
 
 #videoOverlay {
@@ -138,7 +137,7 @@ body {
 
 /* --------- Sections --------- */
 #second {
-  padding: 200px 10vw 0 0;
+  padding: 100px 10vw 0 0;
   width: 100%;
   color: white;
 }
@@ -296,7 +295,10 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
   }
-
+/* second */
+#second {
+  padding: 30px;
+}
   /* Hero */
   #hero {
     height: auto;
@@ -401,5 +403,70 @@ body {
   }
   #videoOverlay {
     z-index: -1;
+  }
+}
+
+
+/* Main container for horizontal scroll */
+.video-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Each video item */
+.video-item {
+  flex: 0 0 80%; /* width of each video, adjust if needed */
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Video style */
+.video-item video {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Optional scrollbar style (for better user indication) */
+.video-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.video-slider::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+.video-slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Background overlay & video fix */
+.back-video,
+#videoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -2;
+}
+#videoOverlay {
+  z-index: -1;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .video-item {
+    flex: 0 0 90%;
+  }
+  .video-item video {
+    height: 50vh;
   }
 }
