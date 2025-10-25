@@ -368,6 +368,7 @@ body {
     flex-direction: row;
     display: flex;
     flex-direction: column-reverse;
+    gap: 5px;
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px;
