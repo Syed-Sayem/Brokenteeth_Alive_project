@@ -365,7 +365,7 @@ body {
 
   /* Footer */
   #footer {
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px;
