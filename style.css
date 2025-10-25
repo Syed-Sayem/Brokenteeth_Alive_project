@@ -228,7 +228,7 @@ body {
 
 /* --------- Footer --------- */
 #footer {
-  background-color: rgb(21, 128, 0);
+  background-color: black;
   color: #fff;
   display: flex;
   align-items: center;
