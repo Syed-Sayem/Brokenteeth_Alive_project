@@ -290,6 +290,8 @@ body {
 @media (max-width: 768px) {
   html,
   body {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
   }
@@ -299,6 +301,7 @@ body {
     height: auto;
     padding: 20px 10px;
     text-align: center;
+    width: 100%;
   }
   #heading h1 {
     font-size: 12vw;
@@ -372,7 +375,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px;
-    width: 100vw;
+    width: 100%;
   }
   #footerleft,
   #footerright {
