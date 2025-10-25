@@ -469,4 +469,7 @@ body {
   .video-item video {
     height: 50vh;
   }
+  #video-slider {
+    padding: 10px;
+  }
 }
